@@ -12,3 +12,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           workflows: "pull-request.yml"
+      - name: Revalidation
+        uses: mheap/validation-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          workflows: "validation-request.yml"
